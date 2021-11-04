@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.btnAddName = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEditName = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.lstNames = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnAddName
@@ -44,44 +45,57 @@
             this.btnAddName.UseVisualStyleBackColor = true;
             this.btnAddName.Click += new System.EventHandler(this.btnAddName_Click);
             // 
-            // button1
+            // btnEditName
             // 
-            this.button1.Location = new System.Drawing.Point(12, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEditName.Location = new System.Drawing.Point(12, 42);
+            this.btnEditName.Name = "btnEditName";
+            this.btnEditName.Size = new System.Drawing.Size(75, 23);
+            this.btnEditName.TabIndex = 1;
+            this.btnEditName.Text = "Edit Name";
+            this.btnEditName.UseVisualStyleBackColor = true;
+            this.btnEditName.Click += new System.EventHandler(this.btnEditName_Click);
             // 
-            // button2
+            // btnRemove
             // 
-            this.button2.Location = new System.Drawing.Point(12, 72);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRemove.Location = new System.Drawing.Point(12, 72);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.TabIndex = 2;
+            this.btnRemove.Text = "Remove Name";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // button3
+            // btnQuit
             // 
-            this.button3.Location = new System.Drawing.Point(12, 233);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnQuit.Location = new System.Drawing.Point(12, 188);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(75, 23);
+            this.btnQuit.TabIndex = 3;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // lstNames
+            // 
+            this.lstNames.FormattingEnabled = true;
+            this.lstNames.Location = new System.Drawing.Point(114, 12);
+            this.lstNames.Name = "lstNames";
+            this.lstNames.Size = new System.Drawing.Size(120, 199);
+            this.lstNames.TabIndex = 4;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 268);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(238, 217);
+            this.Controls.Add(this.lstNames);
+            this.Controls.Add(this.btnQuit);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnEditName);
             this.Controls.Add(this.btnAddName);
             this.Name = "frmMain";
             this.Text = "FormMain";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
 
         }
@@ -89,9 +103,10 @@
         #endregion
 
         private System.Windows.Forms.Button btnAddName;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEditName;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.ListBox lstNames;
     }
 }
 

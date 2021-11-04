@@ -21,5 +21,38 @@ namespace ADDING_FORMS
         {
             this.Close();
         }
-    }
-}
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            if (GetIndexIgnoreCase(txtAddNames.Text) == -1)
+            {
+                
+                frmMain.names.Add(txtAddNames.Text);
+                frmMain.names.Sort();
+                lstNames.DataSource = null;
+                lstNames.DataSource = frmMain.names;
+                txtAddNames.Text = "";
+            }
+
+
+
+        }
+
+        private void FormAddName_Load(object sender, EventArgs e)
+        {
+            lstNames.DataSource = frmMain.names;
+        }
+
+        private static int GetIndexIgnoreCase(string naming)
+        {
+            for (int i = 0; i < frmMain.names.Count; i++)
+            {
+                if (frmMain.names[i].Equals(naming, StringComparison.CurrentCultureIgnoreCase))
+                    return i;
+            }
+            return -1;
+
+
+        }
+    } }
